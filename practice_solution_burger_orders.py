@@ -56,12 +56,9 @@ while True: # this will keep running until the user enters the quit option
 
     # provide options
     action = input("\nYour options are:\n1: Add order to queue\n2: Remove order from queue\n3: Quit program\nPlease enter a number: ")
-    
-    if action == "3":
-        print("\nExiting program.")
-        break # exit the program
 
-    elif action == "1":
+
+    if action == "1":
         response = "y"
         order = Order() # make a new Order object
 
@@ -81,6 +78,10 @@ while True: # this will keep running until the user enters the quit option
             print(f"\nOrder #{order_number} has been removed.")
         except:
             print("\nOrder not found.")
+
+    elif action == "3":
+        print("\nExiting program.")
+        break # exit the program
 
     else:
         print("\nInvalid option, please try again.")
